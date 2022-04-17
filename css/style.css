@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=League+Spartan:wght@400;700&display=swap');
+
+:root {
+	--purple-color: #5d00a5;
+	--violet-color: #430b8cdc;
+	--blue--color: #12006b;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-image: radial-gradient(
+		circle farthest-corner at 32.7% 82.7%,
+		var(--purple-color) 8.3%,
+		var(--blue--color) 79.4%
+	);
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.75rem;
+	font-family: 'League Spartan', sans-serif;
+}
+
+.player-container {
+	height: 80vh;
+	width: 25rem;
+	background-color: #ffffffd5;
+	border-radius: 1.2rem;
+	box-shadow: 0 1rem 3rem 0.3rem rgba(0, 0, 0, 0.498);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.img-container {
+	height: 18rem;
+	width: 18rem;
+	position: relative;
+	top: -3rem;
+	margin: auto;
+}
+
+.img-container img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1.2rem;
+	box-shadow: 0 0.3rem 3rem 0.3rem rgba(0, 0, 0, 0.498);
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin: 0;
+	color: #1d01aa;
+}
+
+h3 {
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin: 5px 0 0;
+	color: #170089;
+}
+
+/* Progress */
+.progress-container {
+	background: rgba(18, 0, 107, 0.418);
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 20px 20px;
+	height: 4px;
+	width: 90%;
+}
+
+.progress {
+	background: rgba(18, 0, 107, 0.53);
+	border-radius: 5px;
+	height: 100%;
+	width: 0%;
+	transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+	position: relative;
+	top: -25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+	margin: auto;
+	position: relative;
+	top: -15px;
+	width: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.fas {
+	font-size: 30px;
+	color: #12006b81;
+	margin: auto 20px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.fas:hover {
+	color: #1d01aac8;
+}
+
+.main-button {
+	font-size: 40px;
+	position: relative;
+	top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+	.img-container {
+		left: 29px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+
+	.player-controls {
+		top: -10px;
+		left: 100px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.player-container {
+		width: 90vw;
+	}
+}
