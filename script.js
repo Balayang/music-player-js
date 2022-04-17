@@ -7,9 +7,7 @@ const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
-const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
-const nextBtn = document.getElementById('next');
 
 // Music
 const songs = [
@@ -54,10 +52,9 @@ function pauseSong() {
 	music.pause();
 }
 
-// Play or Pause Event Listener
-playBtn.addEventListener('click', () => {
+function playOrPause() {
 	isPlaying ? pauseSong() : playSong();
-});
+}
 
 // Update DOM
 function loadSong(song) {
@@ -133,8 +130,6 @@ function setProgressBar(e) {
 }
 
 // Event Listeners
-prevBtn.addEventListener('click', prevSong);
-nextBtn.addEventListener('click', nextSong);
-music.addEventListener('ended', nextSong)
+music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
